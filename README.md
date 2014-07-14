@@ -23,7 +23,7 @@ you'll be able to edit their order by dragging and dropping them.
 
 Make the show, index, and new page for boards. Next, add lists to the boards. 
 Then add cards to the lists. Then add drag and drop functionality. Then make 
-that card modal view. Congratulations, you just made Trello.
+that card modal view. Congratulations, you just made Trello. :beers:
 
 ## Detailed instructions
 
