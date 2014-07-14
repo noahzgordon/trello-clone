@@ -15,9 +15,9 @@ Backbone, Bootstrap and jQuery UI.
 
 Take some time to browse the code provided for you. In this project, you'll 
 deal with the models in the following order: `Boards`, `Lists`, `Cards`, 
-`TodoItems`, and `CardAssignments`. `Lists` and `Cards` have an `ord` that 
-corresponds to the order they're shown in. By the end of this project, you'll 
-be able to edit their order by dragging and dropping them, using jQuery UI.
+`TodoItems`, and `CardAssignments`. `Lists` and `Cards` have an `ord` attribute 
+that corresponds to the order they're shown in. By the end of this project, 
+you'll be able to edit their order by dragging and dropping them.
 
 ## Terse instructions
 
