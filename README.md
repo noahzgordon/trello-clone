@@ -1,21 +1,23 @@
 # Trello project!
 
-Over the next few days, you will build a clone of Trello.
+Over the next few days, you will build a clone of [Trello](https://trello.com/).
 
-We're giving you this project partially to give you practice building stuff on 
-your own. This means that these instructions are intentionally vague.
+The intention of this project is to practice building something a bit bigger on 
+your own in preparation for the final project. This means that these 
+instructions are intentionally vague.
 
-I've made a short version and long version of these instructions. Choose 
-whichever you prefer.
+Below you will find a both terse and detailed instructions. We challenge you to 
+attempt the project using only the terse instructions, but the detailed 
+instructions are also there as a safety net :gift:.
 
-We've already provided authentication and a Rails API for you, so you have to 
-build the Backbone app.
+This project provides authentication and a Rails API so you can focus on 
+Backbone, Bootstrap and jQuery UI.
 
-Start out by looking at the skeleton provided for you. In this project, you'll 
-deal with the models in the following order: Boards, Lists, Cards, TodoItems, 
-and CardAssignments. Lists and Cards have a rank attribute: this corresponds 
-to the order they're shown in. By the end of this project, you'll be able to 
-edit their order by dragging and dropping them, using jQuery UI.
+Take some time to browse the code provided for you. In this project, you'll 
+deal with the models in the following order: `Boards`, `Lists`, `Cards`, 
+`TodoItems`, and `CardAssignments`. `Lists` and `Cards` have an `ord` that 
+corresponds to the order they're shown in. By the end of this project, you'll 
+be able to edit their order by dragging and dropping them, using jQuery UI.
 
 ## Terse instructions
 
@@ -25,7 +27,7 @@ that card modal view. Congratulations, you just made Trello.
 
 ## Detailed instructions
 
-### Phase I: Board Index
+### Phase I: Boards Index
 
 * Start up Backbone. Remember to check that you're getting that annoying "Hello 
 from Backbone" alert.
