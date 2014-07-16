@@ -4,10 +4,6 @@ window.TrelloClone = {
   Views: {},
   Routers: {},
   initialize: function() {
-    alert('Hello from Backbone!');
+    alert('Hello from Trello Clone!');
   }
 };
-
-$(document).ready(function(){
-  TrelloClone.initialize();
-});
