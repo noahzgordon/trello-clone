@@ -12,6 +12,7 @@
 #
 
 class User < ActiveRecord::Base
+  validates :email, :session_token, presence: true
   has_many :boards
   has_many :card_assignments
   has_many :board_memberships
