@@ -1,20 +1,13 @@
 TrelloClone::Application.routes.draw do
   root to: 'static_pages#root'
-  get '/welcome', to: 'static_pages#welcome'
 
   resources :users
   resource :session
 
   namespace :api, defaults: { format: :json } do
-    resources :boards do
-      resources :lists, only: [:create]
-    end
-
-    resources :lists, except: [:create] do
-      resources :cards, only: [:create]
-    end
-
-    resources :cards, except: [:create]
+    resources :boards, except: [:new, :edit]
+    resources :lists, only: [:create, :update, :destroy]
+    resources :cards, only: [:create, :update, :destroy]
 
     # resources :items
     # resources :board_memberships
