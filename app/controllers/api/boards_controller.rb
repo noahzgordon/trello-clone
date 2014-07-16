@@ -22,7 +22,7 @@ module Api
     end
 
     def show
-      @board = Board.find(params[:id])
+      @board = Board.includes(lists: :cards).find(params[:id])
 
       if @board.is_member?(current_user)
         render :show
