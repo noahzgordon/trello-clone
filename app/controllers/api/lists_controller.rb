@@ -3,7 +3,7 @@ module Api
     before_action :require_board_member!
 
     def create
-      @list = current_user.lists.new(list_params)
+      @list = current_board.lists.new(list_params)
 
       if @list.save
         render json: @list
@@ -16,6 +16,16 @@ module Api
       @list = List.find(params[:id])
       @list.destroy
       render json: {}
+    end
+
+    def update
+      @list = current_board.lists.find(params[:id])
+
+      if @list.update_attributes(list_params)
+        render json: @list
+      else
+        render json: @list.errors.full_messages, status: :unprocessable_entity
+      end
     end
 
     private
