@@ -1,5 +1,5 @@
 module Api
-  class ListsController < ApplicationController
+  class ListsController < ApiController
     before_action :require_board_member!
 
     def create

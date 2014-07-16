@@ -1,5 +1,5 @@
-u1 = User.create(email: 'thejamaicandave@gmail.com', password: 'password')
-u2 = User.create(email: 'ripe@gmail.com', password: 'password')
+u1 = User.create(email: 'ripe@gmail.com', password: 'password')
+u2 = User.create(email: 'thejamaicandave@gmail.com', password: 'password')
 
 b1 = u1.boards.create(title: 'Workout')
 b2 = u1.boards.create(title: 'Jamaica')
@@ -24,3 +24,6 @@ c9 = l2.cards.create(title: 'situps', description: 'ouchy')
 i1 = c1.items.create(done: false, title: 'mocha')
 i2 = c1.items.create(done: true, title: 'mocha')
 i3 = c1.items.create(done: true, title: 'cookie')
+
+b1.members = [u2]
+b1.save

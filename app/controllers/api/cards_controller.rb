@@ -1,4 +1,4 @@
 module Api
-  class CardsController < ApplicationController
+  class CardsController < ApiController
   end
 end

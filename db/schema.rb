@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140708170808) do
+ActiveRecord::Schema.define(version: 20140716203208) do
 
   create_table "board_memberships", force: true do |t|
     t.integer  "user_id",    null: false
@@ -75,7 +75,6 @@ ActiveRecord::Schema.define(version: 20140708170808) do
     t.string   "email",           null: false
     t.string   "password_digest", null: false
     t.string   "session_token",   null: false
-    t.string   "gravatar_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

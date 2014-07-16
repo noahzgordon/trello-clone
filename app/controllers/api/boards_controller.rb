@@ -1,5 +1,5 @@
 module Api
-  class BoardsController < ApplicationController
+  class BoardsController < ApiController
     def create
       @board = current_user.boards.new(board_params)
 
@@ -22,7 +22,7 @@ module Api
     end
 
     def show
-      @board = Board.includes(lists: :cards).find(params[:id])
+      @board = Board.includes(:members, lists: :cards).find(params[:id])
 
       if @board.is_member?(current_user)
         render :show
