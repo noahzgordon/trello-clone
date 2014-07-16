@@ -112,3 +112,8 @@ to give the option of adding users who haven't already been added.
 * Add Javascript prettiness everywhere. Make modals to confirm that you 
 actually want to delete things. Think of more pretty things to do, then do 
 them and add them to these instructions.
+
+
+### Planning
+
+![alt text](./routes_doc.jpg "Routes")
