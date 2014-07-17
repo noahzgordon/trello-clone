@@ -1,0 +1,31 @@
+<nav class="navbar navbar-default" role="navigation">
+<div class="container container-fluid">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Trello Clone</a>
+  </div>
+
+  <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
+    <% if signed_in? %>
+    <%= button_to "Sign out", session_url, method: :delete, class: "btn btn-default navbar-btn" %>
+    <% else %>
+    <ul class="nav navbar-nav">
+      <li><%= link_to "Log in", new_session_url %></li>
+      <li><%= link_to "Sign up", new_user_url %></li>
+    </ul>
+    <% end %>
+  </div>
+</div>
+</nav>
+
+<% if flash[:errors] %>
+<div class="alert alert-warning alert-dismissible" role="alert">
+   <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+<%= flash[:errors].join("<br>") %>
+</div>
+<% end %>

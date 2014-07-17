@@ -7,19 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <% if signed_in? %>
-    <%= button_to "Sign out", session_url, method: :delete %>
-  <% else %>
-    <%= link_to "Log in", new_session_url %>
-    <%= link_to "Sign up", new_user_url %>
-  <% end %>
-
-  <% if flash[:errors] %>
-    <br>
-    <%= flash[:errors].join("<br>") %>
-  <% end %>
-
-<%= yield %>
-
+  <%= render partial: "layouts/header" %>
+  <%= yield %>
 </body>
 </html>
