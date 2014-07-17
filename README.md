@@ -116,4 +116,5 @@ them and add them to these instructions.
 
 ### Planning
 
+![alt text](./models_doc.jpg "Models")
 ![alt text](./routes_doc.jpg "Routes")
