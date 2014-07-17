@@ -7,7 +7,14 @@ TrelloClone.Views.CardForm = Backbone.View.extend({
   },
 
   events: {
-    'click a': 'showForm'
+    'click a': 'showForm',
+    'submit' : 'createCard'
+  },
+
+  createCard: function (event) {
+    event.preventDefault();
+    debugger
+    this.collection.create({ title: this.$('textarea').val() }, { wait: true });
   },
 
   render: function () {

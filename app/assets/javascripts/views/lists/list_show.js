@@ -23,7 +23,9 @@ TrelloClone.Views.ListShow = Backbone.View.extend({
   },
 
   renderFooter: function () {
-    var formView = new TrelloClone.Views.CardForm();
+    var formView = new TrelloClone.Views.CardForm({
+      collection: this.model.cards()
+    });
     this.$('.panel-footer').html(formView.render().$el);
   },
 });
