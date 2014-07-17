@@ -1,6 +1,7 @@
-TrelloClone.Views.CardForm = Backbone.View.extend({
-  formTemplate: JST['cards/form'],
-  linkTemplate: JST['cards/form_link'],
+TrelloClone.Views.ListForm = Backbone.View.extend({
+  formTemplate: JST['lists/form'],
+  linkTemplate: JST['lists/form_link'],
+  className: 'col-md-3',
 
   initialize: function () {
     this.formShowing = false;
@@ -8,16 +9,16 @@ TrelloClone.Views.CardForm = Backbone.View.extend({
 
   events: {
     'click a': 'showForm',
-    'submit' : 'createCard',
     'click .close': 'hideForm',
-    'keydown textarea': 'maybeCreateCard'
+    'submit' : 'create',
+    'keydown textarea': 'maybeCreate'
   },
 
-  createCard: function (event) {
+  create: function (event) {
     event.preventDefault();
     this.collection.create({
       title: this.$('textarea').val(),
-      list_id: this.collection.list.id
+      board_id: this.collection.board.id
     }, { wait: true });
     this.$('textarea').val('');
     this.$('textarea').focus();
@@ -28,9 +29,9 @@ TrelloClone.Views.CardForm = Backbone.View.extend({
     this.render();
   },
 
-  maybeCreateCard: function (event) {
+  maybeCreate: function (event) {
     if(event.keyCode === 13) {
-      this.createCard(event);
+      this.create(event);
     }
   },
 
