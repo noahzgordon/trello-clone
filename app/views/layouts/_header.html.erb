@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 <div class="container container-fluid">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -12,7 +12,7 @@
 
   <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
     <% if signed_in? %>
-    <%= button_to "Sign out", session_url, method: :delete, class: "btn btn-default navbar-btn" %>
+    <%= button_to "Sign out", session_url, method: :delete, class: "btn btn-primary navbar-btn" %>
     <% else %>
     <ul class="nav navbar-nav">
       <li><%= link_to "Log in", new_session_url %></li>

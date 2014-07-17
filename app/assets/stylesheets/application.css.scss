@@ -9,12 +9,36 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require jquery.ui.all
  *= require_tree .
  */
+
+$brand-primary  : #598FAD;
 
 @import "bootstrap";
 @import "font-awesome";
 
+// for fixed top navbar
+body {
+  padding-top: 70px; 
+}
+
 .panel-spaced {
   margin-left: 10px;
 }
+
+.well-unspaced {
+  margin-top: 0px;
+}
+
+.close-lg {
+  font-size: 30px;
+}
+
+// .backdrop {
+//   position: absolute;
+//   background-color: #23719F;
+//   height: 100%;
+//   width: 2000px;
+//   text-align: left;
+// }

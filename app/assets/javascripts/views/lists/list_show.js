@@ -1,5 +1,6 @@
 TrelloClone.Views.ListShow = Backbone.View.extend({
   template: JST['lists/show'],
+  className: "col-md-3",
 
   render: function () {
     var content = this.template({
@@ -7,13 +8,22 @@ TrelloClone.Views.ListShow = Backbone.View.extend({
     });
     this.$el.html(content);
 
+    this.renderCards();
+    this.renderFooter();
+    return this;
+  },
+
+  renderCards: function () {
     this.model.cards().each(function (card) {
       var view = new TrelloClone.Views.CardShow({
         model: card
       });
       this.$('#cards').append(view.render().$el);
     }, this);
+  },
 
-    return this;
+  renderFooter: function () {
+    var formView = new TrelloClone.Views.CardForm();
+    this.$('.panel-footer').html(formView.render().$el);
   },
 });
