@@ -49,7 +49,7 @@ have a board's show page contain the name of the board and a list of its lists.
 You can just display a list's name, given that at the moment it has no other 
 content.
   * Remember to display the lists in order of their rank. You might want to 
-overwrite the `comparator` method of the `cards` collection.
+overwrite the `comparator` method of the `lists` collection.
 * When the user creates a board, it should redirect them to the board's show 
 page. You can use the router's `navigate` method for this.
 * Add the ability to create lists, via a new list view.
