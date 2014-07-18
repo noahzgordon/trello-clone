@@ -1,4 +1,4 @@
-#  Deprecated Trello project! [head here](https://github.com/appacademy-demos/trellino/tree/skeleton)!
+#  Deprecated Trello project!
 
 Over the next few days, you will build a clone of [Trello](https://trello.com/).
 
