@@ -53,8 +53,6 @@ overwrite the `comparator` method of the `lists` collection.
 * When the user creates a board, it should redirect them to the board's show 
 page. You can use the router's `navigate` method for this.
 * Add the ability to create lists, via a new list view.
-* Add the ability to add board members. You should be able to type in a email 
-and the website will add that person, or complain that they don't exist.
 * Add a button to delete the board.
 
 ### Phase III: Cards (finally!)
@@ -95,6 +93,8 @@ deletion of the board.
 anyway.
   * You can get advice on this part of the process from 
 [this tutorial](http://www.jacklmoore.com/notes/jquery-modal-tutorial/).
+  * Add the ability to add board members. You should be able to type in a email 
+and the website will add that person, or complain that they don't exist.
 
 ### Phase V: Card modal view
 
