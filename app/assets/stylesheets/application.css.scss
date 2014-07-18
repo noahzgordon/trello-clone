@@ -13,33 +13,5 @@
  *= require_tree .
  */
 
-$brand-primary  : #598FAD;
-
 @import "bootstrap";
 @import "font-awesome";
-
-// for fixed top navbar
-body {
-  padding-top: 70px; 
-}
-
-.panel-spaced {
-  margin-left: 10px;
-}
-
-.well-unspaced {
-  margin-top: 0px;
-}
-
-.close-lg {
-  font-size: 30px;
-}
-
-// .backdrop {
-//   position: absolute;
-//   background-color: #23719F;
-//   top: 50px;
-//   bottom: 0px;
-//   width: 2000px;
-//   text-align: left;
-// }

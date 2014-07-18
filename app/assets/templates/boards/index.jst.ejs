@@ -1,9 +1,0 @@
-<h2>My Boards</h2>
-
-<% boards.each(function (board) { %>
-  <div class="panel panel-default col-md-3 col-md-offset-1">
-    <div class="panel-body">
-      <a href="#/boards/<%= board.id %>"><%= board.escape("title") %></a>
-    </div>
-  </div>
-<% }); %>
