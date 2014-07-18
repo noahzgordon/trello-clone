@@ -1,4 +1,4 @@
-#  Deprecated Trello project!
+# Trello project!
 
 Over the next few days, you will build a clone of [Trello](https://trello.com/).
 
