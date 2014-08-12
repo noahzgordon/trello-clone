@@ -10,15 +10,21 @@
     <a class="navbar-brand" href="#">Trello Clone</a>
   </div>
 
-  <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right">
     <% if signed_in? %>
-    <%= button_to "Sign out", session_url, method: :delete, class: "btn btn-primary navbar-btn" %>
+      <li id='add-dropdown' class='dropdown'>
+        <button 
+          class='dropdown-toggle navbar-btn btn btn-primary'
+          data-toggle='dropdown'><span class='glyphicon glyphicon-plus'></span>
+        </button>
+      </li>
+      <li><%= button_to "Sign out", session_url, method: :delete, class: "btn btn-primary navbar-btn" %></li>
     <% else %>
-    <ul class="nav navbar-nav">
       <li><%= link_to "Log in", new_session_url %></li>
       <li><%= link_to "Sign up", new_user_url %></li>
-    </ul>
     <% end %>
+    </ul>
   </div>
 </div>
 </nav>
@@ -26,6 +32,6 @@
 <% if flash[:errors] %>
 <div class="alert alert-warning alert-dismissible" role="alert">
    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-<%= flash[:errors].join("<br>") %>
+<%= flash[:errors].join("<br>").html_safe %>
 </div>
 <% end %>

@@ -13,6 +13,8 @@
 
 class User < ActiveRecord::Base
   validates :email, :session_token, presence: true
+  validates :password, length: { minimum: 5, allow_nil: true }
+  validates :email, uniqueness: true
 
   has_many :boards
   has_many :card_assignments
