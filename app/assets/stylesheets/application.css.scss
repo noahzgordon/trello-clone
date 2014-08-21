@@ -31,7 +31,25 @@ ul, li {
 
 .content {
   margin: 70px auto;
-  width: 800px;
+  width: 1000px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 20px;
+  margin: 5px;
+}
+
+p {
+  text-align: center;
 }
 
 .lists {
@@ -41,19 +59,90 @@ ul, li {
 .list {
   display: block;
   float: left;
-  padding: 0 30px;
-  margin: 20px;
+  width: 200px;
+  padding: 0 10px;
+  margin: 15px;
   border: 5px solid #ccc;
   background: #ccc;
   border-radius: 10px;
   box-shadow: 2px 2px 1px black;
 }
 
+.cards {
+  width: 150px;
+  display: block;
+  margin: auto;
+}
+
+.list:hover, .card:hover {
+  cursor: move;
+}
+
 .card {
   margin: 5px auto;
+  height: 50px;
+  width: 150px;
   border: 3px;
   border-radius: 5px;
   background: #fff;
 
 }
 
+.modal-screen {
+  background: #000;
+  opacity: 0.5;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  display: none;
+  z-index: 99998;
+}
+
+.modal-card {
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  height: 300px;
+  width: 500px;
+  margin: -150px 0 0 -250px;
+  position: fixed;
+  z-index: 99999;
+  display: none;
+  border-radius: 15px;
+}
+
+.modal-card.active {
+  display: block;
+}
+
+.modal-screen.active {
+  display: block;
+}
+
+
+.modal-card > h2 {
+  font-size: 35px;
+  text-align: left;
+  margin: 20px;
+}
+
+.modal-card > p {
+  font-size: 20px;
+  text-align: left;
+  margin: 20px;
+  margin-left: 40px;
+}
+
+ul.items {
+  list-style: circle;
+}
+
+.items > li {
+  list-style: circle;
+  margin-left: 60px;
+}
+
+.member-list, .member-list > li {
+  list-style: circle;
+}

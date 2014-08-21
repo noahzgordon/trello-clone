@@ -25,3 +25,4 @@ TrelloClone.Views.BoardShow = Backbone.View.extend({
     return this;
   }
 });
+

@@ -1,0 +1,11 @@
+<h2><%= card.escape('title') %></h2>
+
+<p><%= card.escape('description') %></p>
+
+<ul class="items">
+  <% items.each(function(item) { %>
+    <li>
+      <%= item.escape('title') %> <% if (item.get('done?')) { %>✔<% } %>
+    </li>
+  <% }) %>
+</ul>
