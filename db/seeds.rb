@@ -1,5 +1,5 @@
-u1 = User.create(email: 'ripe@gmail.com', password: 'password')
-u2 = User.create(email: 'thejamaicandave@gmail.com', password: 'password')
+u1 = User.create(email: 'noah', password: 'password')
+u2 = User.create(email: 'andrew', password: 'password')
 
 b1 = u1.boards.create(title: 'Workout')
 b2 = u1.boards.create(title: 'Jamaica')
