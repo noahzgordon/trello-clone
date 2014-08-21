@@ -20,6 +20,9 @@ TrelloClone.Views.BoardShow = Backbone.View.extend({
       view.$(".lists").append(listShowView.render().$el)
     })
 
+    var listNewView = new TrelloClone.Views.ListNew();
+    this.$(".lists").append(listNewView.render().$el);
+
     this.$('.lists').sortable();
 
     return this;

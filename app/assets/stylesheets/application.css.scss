@@ -68,6 +68,23 @@ p {
   box-shadow: 2px 2px 1px black;
 }
 
+.list-form {
+  display: block;
+  float: left;
+  width: 200px;
+  padding: 0 10px;
+  margin: 15px auto;
+  border: 5px dotted #ccc;
+  background: #eee;
+  border-radius: 10px;
+}
+
+.list-form > input {
+  width: 150px;
+  text-align: center;
+  margin: auto;
+}
+
 .cards {
   width: 150px;
   display: block;
