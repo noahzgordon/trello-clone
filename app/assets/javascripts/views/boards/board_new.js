@@ -12,6 +12,7 @@ TrelloClone.Views.BoardNew = Backbone.View.extend({
     var formData = $(event.target).serializeJSON()["board"]
     TrelloClone.Collections.boards.create(formData, {
       success: function() {
+
         Backbone.history.navigate("/", { trigger: true })
       },
 

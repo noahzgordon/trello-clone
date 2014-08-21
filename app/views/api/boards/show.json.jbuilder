@@ -2,3 +2,9 @@
 # it should include the board
 #  - its lists
 #    - the cards for each list
+
+
+json.title @board.title
+
+json.lists @board.lists, :title, :ord
+
